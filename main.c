@@ -1,10 +1,11 @@
 #include <stdio.h>
-#include "01_matriz_adjacencia/01-matriz-adjacencia.h"
-#include "02_matriz_adj_nao_direcionado/matriz_adj_nao_direcionado.h"
-#include "03_matriz_adj_direcionado/matriz_adj_direcionado.h"
-#include "04_matriz_grafo/matriz-grafo.h"
+#include "01_matriz_adjacencia/matriz-adjacencia.h"
+#include "02_lista_adjacencia/lista-adjacencia.h"
+#include "03_matriz_adj_nao_direcionado/matriz_adj_nao_direcionado.h"
+#include "04_matriz_adj_direcionado/matriz_adj_direcionado.h"
+#include "05_grafo/matriz-grafo.h"
 
-int matrizAdjNaoDirecionado(void) {
+int main(void) {
     int opcao;
 
     printf("Iniciando o programa\n");
@@ -13,8 +14,10 @@ int matrizAdjNaoDirecionado(void) {
         // Exibindo o menu de opções
         printf("\nMenu:\n");
         printf("1. Exemplo Matriz Adjacente\n");
-        printf("2. Exemplo Matriz Adjacente Não Direcionado\n");
-        printf("2. Exemplo Matriz Adjacente Direcionado\n");
+        printf("2. Exemplo Lista Adjacente\n");
+        printf("3. Exemplo Matriz Adjacente Nao Direcionado\n");
+        printf("4. Exemplo Matriz Adjacente Direcionado\n");
+        printf("5. Exemplo Adicional Matriz Grafo\n");
         printf("0. Sair\n");
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
@@ -25,12 +28,15 @@ int matrizAdjNaoDirecionado(void) {
                 matrizAdjacente();
                 break;
             case 2:
-                matrizAdjNaoDirecionado();
+                listaAdjacencia();
                 break;
             case 3:
-                matrizAdjDirecionado();
+                matrizAdjNaoDirecionado();
                 break;
             case 4:
+                matrizAdjDirecionado();
+                break;
+            case 5:
                 matrizGrafo();
                 break;
             case 0:
